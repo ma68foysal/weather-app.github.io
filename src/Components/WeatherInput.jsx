@@ -5,12 +5,14 @@ import WeatherResult from './WeatherResult.jsx'
 
 function WeatherInput({get_data}) {
  
-
   const [cityName,setCityName]=useState("")
   const [data, setData]=useState()
 
+  function Onsubmit(e){
+    e.preventDefault()
+    get_data(cityName)
+  }
    function get_data(cityName){
-
             const api =`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=c2965f463fd1030468730b6b9d4096a8`
             axios.get(api).then((res)=>{
             setData(res)
@@ -19,11 +21,6 @@ function WeatherInput({get_data}) {
               console.error(error)
             })
 
-  }
-
-  function Onsubmit(e){
-    e.preventDefault()
-    get_data(cityName)
   }
   function handleChange(e){
        setCityName(e.target.value)

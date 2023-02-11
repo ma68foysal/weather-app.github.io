@@ -25,7 +25,7 @@ function WeatherResult({data}) {
             < span className={result.InfoLabel} >
             {(temp-273).toFixed(2)}°C <span>{`|${weather[0].description}`}</span>
             </span>
-            < img className={result.InfoIcon}  src='./Icons/cloudy-night.svg'/>
+            < img className={result.InfoIcon}  src='./Icons/cloudy-night.svg' alt='Weather-info'/>
         </div>
         
         <div className={result.WeatherContainer}>
