@@ -4,7 +4,7 @@ import Style from './Style.module.css'
 import WeatherResult from './WeatherResult.jsx'
 
 
-function WeatherInput({get_data}) {
+function WeatherInput() {
  
   const [cityName,setCityName]=useState("")
   const [data, setData]=useState()
