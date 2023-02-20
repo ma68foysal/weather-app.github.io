@@ -25,7 +25,7 @@ function WeatherResult({data}) {
             < span className={result.InfoLabel} >
             {(temp-273).toFixed(2)}°C <span>{`|${weather[0].description}`}</span>
             </span>
-            < img className={result.InfoIcon}  src='./Icons/cloudy-night.svg' alt='Weather-info'/>
+            < img className={result.InfoIcon}  src='./Icons/cloudyNight.svg' alt='Weather-info'/>
         </div>
         
         <div className={result.WeatherContainer}>
@@ -36,7 +36,7 @@ function WeatherResult({data}) {
         <div className={result.WeatherInfoContainer}>
 
             <div className={result.WeatherResult}>
-                <img src={isDay ?'./Icons/cloudy-night.svg' :"./Icons/temp.svg"} alt="" />
+                <img src={isDay ?'./Icons/cloudy-night.svg' :"./Icons/temp.svg"} alt="icon" />
                 <span className={result.span}>
                 {isDay ? Sunset :Sunrise }
                 <span>{isDay ?  "Sunset":"Sunrise" }</span>

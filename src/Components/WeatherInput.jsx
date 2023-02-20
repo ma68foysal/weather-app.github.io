@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Style from './Style.module.css'
 import WeatherResult from './WeatherResult.jsx'
 
+
 function WeatherInput({get_data}) {
  
   const [cityName,setCityName]=useState("")
@@ -10,9 +11,9 @@ function WeatherInput({get_data}) {
 
   function Onsubmit(e){
     e.preventDefault()
-    get_data(cityName)
+    getData(cityName)
   }
-   function get_data(cityName){
+   function getData(cityName){
             const api =`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=c2965f463fd1030468730b6b9d4096a8`
             axios.get(api).then((res)=>{
             setData(res)
@@ -35,7 +36,7 @@ function WeatherInput({get_data}) {
      data === undefined ? 
      <div className={Style.Container}>
      <span className={Style.AppTitle}>React Weather App</span>
-     <img className={Style.WelcomeWeatherLogo} src="./Icons/perfect-day.svg" alt="" />
+     <img className={Style.WelcomeWeatherLogo} src="./Icons/perfectDay.svg" alt="day" />
      <span className={Style.ChooseCityLabel}>Find Weather of your city
      </span>
 
